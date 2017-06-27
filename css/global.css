@@ -1,0 +1,19 @@
+/* Slideshow */
+.slideshow_mj {
+    width: 200px;
+    height: 125px;
+    overflow: hidden;
+}
+
+.slideshow_mj ul {
+    list-style: none;
+    width: 1000px;
+    padding: 0;
+    margin: 0;
+}
+
+.slideshow_mj li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
