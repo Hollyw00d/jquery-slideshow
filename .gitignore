@@ -1,13 +1,67 @@
-*.tar
-*.tar.*
-*.jar
-*.exe
-*.msi
-*.zip
-*.tgz
-*.log
-*.log.*
-*.sig
+# Code editor files
+.idea/
 
-pkg/
-src/
+# CVS and SVN directories
+CVS
+.svn
+
+# Node modules
+node_modules/
+node_modules
+*node_modules/*
+
+
+# Useless Windows Files
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.exe
+*.msm
+*.msp
+._*
+*~
+*.bak
+
+# Images
+*.png
+*.gif
+*.jpg
+*.bmp
+*.svg
+
+
+
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+23.235.47.133
