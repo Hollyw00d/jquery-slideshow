@@ -46,21 +46,20 @@
             
 
             previousSymbol.on('click', function(e) {
-                e.preventDefault();
+                e.preventDefault(); 
 
-                var getSlideshowUlMarginLeft = Number(getSlideshowUl.css('margin-left').slice(0, -2));
-
-                getSlideshowUl.animate({'margin-left': '+=204'});            
-                
-                console.log(getSlideshowUlMarginLeft);
-                console.log(typeof getSlideshowUlMarginLeft);
-                console.log(getSlideshowLiLength * 204);
+                if( Number(getSlideshowUl.css('margin-left').slice(0, -2)) < 0 ) {
+                    getSlideshowUl.animate({'margin-left': '+=204'}, 700);
+                }
                 
             });
 
             nextSymbol.on('click', function(e) {
                 e.preventDefault();
-                getSlideshowUl.animate({'margin-left': '-=204'});
+                if( Number(getSlideshowUl.css('margin-left').slice(0, -2)) < (-1 * (Number(getSlideshowUl.css('margin-left').slice(0, -2))) * getSlideshowLiLength) ) {
+
+                }
+                getSlideshowUl.animate({'margin-left': '-=204'}, 700);
             });
 
         }
