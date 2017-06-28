@@ -6,8 +6,7 @@
 
             var getSlideshow = $('.slideshow_mj');
             var getSlideshowUl = getSlideshow.find('ul');
-            var getSlideshowLi = getSlideshow.find('li');
-            var slideshowImgs = getSlideshow.find('img');            
+            var getSlideshowLi = getSlideshow.find('li');          
 
             var sum = 0; 
 
@@ -47,8 +46,9 @@
 
             previousSymbol.on('click', function(e) {
                 e.preventDefault(); 
+                var currentMarginLeft = Number(getSlideshowUl.css('margin-left').slice(0, -2));
 
-                if( Number(getSlideshowUl.css('margin-left').slice(0, -2)) < 0 ) {
+                if( currentMarginLeft < 0 ) {
                     getSlideshowUl.animate({'margin-left': '+=204'}, 700);
                 }
                 
@@ -56,10 +56,14 @@
 
             nextSymbol.on('click', function(e) {
                 e.preventDefault();
-                if( Number(getSlideshowUl.css('margin-left').slice(0, -2)) < (-1 * (Number(getSlideshowUl.css('margin-left').slice(0, -2))) * getSlideshowLiLength) ) {
 
-                }
+                var currentMarginLeft = Number(getSlideshowUl.css('margin-left').slice(0, -2));
+
+                // if( Number(getSlideshowUl.css('margin-left').slice(0, -2)) > (-1 * (Number(getSlideshowUl.css('margin-left').slice(0, -2))) * getSlideshowLiLength) ) {
+
+                // }
                 getSlideshowUl.animate({'margin-left': '-=204'}, 700);
+                console.log(currentMarginLeft);
             });
 
         }
