@@ -10,8 +10,8 @@
 
             var sum = 0; 
 
-            var previousSymbol = $('<a class="slideshow_mj_prev" href="#">&lt;</a>')
-            var nextSymbol = $('<a class="slideshow_mj_next" href="#">&gt;</a>')
+            var previousSymbol = $('<a class="slideshow_mj_prev" href="#">&lt;</a>');
+            var nextSymbol = $('<a class="slideshow_mj_next" href="#">&gt;</a>');
 
             previousSymbol.css({
                 position: 'absolute',
