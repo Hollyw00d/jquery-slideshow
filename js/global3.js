@@ -1,30 +1,18 @@
 $(document).ready(function () {   
 	
-		function matchWidth() {
-			var windowWidth = $( window ).width();
-
-			var $sameHeightDivs = $('.sameHeight');
-			var maxHeight = 0;
-			$sameHeightDivs.each(function() {
-
-				if(maxHeight < $(this).outerHeight(true)) {
-					maxHeight = $(this).outerHeight(true);
-				}	
-
-			});
-
-			if(windowWidth > 768) {
-				$sameHeightDivs.css({ height: maxHeight + 'px' });
-			}
-			else {
-				$sameHeightDivs.css({ height: 'auto'});	
-			}
-
+function equalHeight(group) {
+	var windowWidth = $(window).width();
+	var tallest = 0;
+	group.each(function() {
+		var thisHeight = $(this).height();
+		if(thisHeight > tallest) {
+			tallest = thisHeight;
 		}
-		
+	});
+	group.height(tallest);
+}
 
-		$(window).on('load', matchWidth);
-		$(window).on('resize', matchWidth);
+equalHeight($('.sameHeight'));
 		
 
 });
