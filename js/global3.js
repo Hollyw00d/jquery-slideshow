@@ -9,10 +9,16 @@ function equalHeight(group) {
 			tallest = thisHeight;
 		}
 	});
-	group.height(tallest);
+	if(windowWidth > 768) {
+		group.height(tallest);
+	}
+	else {
+		group.css('height', 'auto');
+	}
 }
 
-equalHeight($('.sameHeight'));
-		
+$(window).on('load resize', function() {
+	equalHeight($('.sameHeight'));
+});	
 
 });
